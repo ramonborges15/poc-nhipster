@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  nhipster-postgresql:
+    image: postgres:13.2
+    # volumes:
+    #     - ~/volumes/jhipster/nhipster/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=sa
+      - POSTGRES_PASSWORD=yourStrong(!)Password
+      - POSTGRES_DB=nhipster
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5433:5432
